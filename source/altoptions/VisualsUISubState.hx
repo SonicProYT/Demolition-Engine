@@ -127,6 +127,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool',
 			true);
 		addOption(option);
+		
+		var option:Option = new Option('Long Health Bar',
+			"If unchecked, the health bar will be short.",
+			'longBar',
+			'bool',
+			true);
+		addOption(option);
 
 		var option:Option = new Option('Long Health Bar',
 			"If unchecked, the health bar will be short.",
