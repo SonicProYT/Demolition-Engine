@@ -397,7 +397,7 @@ class FreeplayState extends MusicBeatState
 			if (FlxG.keys.pressed.SHIFT){
 				LoadingState.loadAndSwitchState(new ChartingState());
 			}else{
-				LoadingState.loadAndSwitchState(new CharSelectState());
+				LoadingState.loadAndSwitchState(new PlayState());
 				FlxG.mouse.visible = false;
 			}
 
