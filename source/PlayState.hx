@@ -292,10 +292,6 @@ class PlayState extends MusicBeatState
 	var keysPressed:Array<Bool> = [];
 	var boyfriendIdleTime:Float = 0.0;
 	var boyfriendIdled:Bool = false;
-	
-	//character selection
-	var charSelection:Int = CharSelectState.curSelected;
-
 
 	// Lua shit
 	public static var instance:PlayState;
