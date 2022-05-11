@@ -885,6 +885,9 @@ class PlayState extends MusicBeatState
 		boyfriend = new Boyfriend(0, 0, bf);
 		case 2: 
 		boyfriend = new Boyfriend(0, 0, bf-car);
+		default:
+		boyfriend = new Boyfriend(0, 0, bf);
+		}
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
