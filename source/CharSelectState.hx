@@ -11,8 +11,9 @@ import flixel.effects.FlxFlicker;
 import flixel.group.FlxGroup.FlxTypedGroup;
 
 class CharSelectState extends MusicBeatState{
-    var charsArray:Array<String> = ['BOYFRIEND', 'BF-CAR'];
+    var charsArray:Array<String> = ['PLAYER FROM SONG', 'BOYFRIEND', 'BF-CAR'];
     var leBG:FlxSprite;
+    var playerfromsong:FlxSprite;
     var bf:FlxSprite;
     var bfcar:FlxSprite;
     var selectedText:FlxText;
@@ -24,6 +25,12 @@ class CharSelectState extends MusicBeatState{
         leBG.color = FlxColor.BLUE;
         leBG.screenCenter();
         add(leBG);
+	playerfromsong = new FlxSprite(450, 300).loadGraphic(Paths.image('characters/BOYFRIEND'));
+        playerfromsong.frames = Paths.getSparrowAtlas('characters/BOYFRIEND');
+        playerfromsong.animation.addByPrefix('idle', 'BF idle dance', 24, true);
+        playerfromsong.animation.addByPrefix('hey', 'BF HEY!!', 24, true);
+        playerfromsong.animation.play('idle');
+        add(playerfromsong);
         bf = new FlxSprite(450, 300).loadGraphic(Paths.image('characters/BOYFRIEND'));
         bf.frames = Paths.getSparrowAtlas('characters/BOYFRIEND');
         bf.animation.addByPrefix('idle', 'BF idle dance', 24, true);
